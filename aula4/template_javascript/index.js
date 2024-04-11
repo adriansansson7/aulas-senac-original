@@ -1,3 +1,11 @@
-let horasTrabalho = prompt("Quantas horas você trabalha por dia?")
-let salarioDia = prompt("Quanto você recebe por dia?")
-alert(`Voce recebe ${salarioDia/horasTrabalho} por hora`)
+/*let nome
+console.log(typeof nome)
+
+let idade
+console.log(typeof idade)*/
+
+// R: Eu não atribui valor na variável //
+
+const nome = "Ádrian"
+const idade = 19
+console.log("Olá!", "Meu nome é ", (nome), "e eu tenho", (idade), "anos")
