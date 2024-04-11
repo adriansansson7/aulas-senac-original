@@ -1,11 +1,9 @@
-//olá mundo
-console.log("Hello World!")
-//Primeira execução de variáveis
-const nome = "Ádrian"
-const idade = 19
-console.log("Meu nome é ",nome," e tenho ", idade, "anos de idade")
-//Teste
-const idadeNumero=19
-const idadeTexto=idadeNumero.toString()
-console.log(typeof idadeNumero)
-console.log(typeof idadeTexto)
+/* const primeiroNome = "Ádrian"
+const segundoNome = "da Rosa"
+const idadeNumero= "19"
+const serEstudante = "Não"
+console.log("O seu nome e ",primeiroNome," o seu sobrenome e ", segundoNome, " idade ", idadeNumero," é estudante?", serEstudante) */
+
+let horasTrabalho = prompt("Quantas horas você trabalha por dia?")
+let salarioDia = prompt("Quanto você recebe por dia?")
+alert(`Voce recebe ${salarioDia/horasTrabalho} por hora`)
