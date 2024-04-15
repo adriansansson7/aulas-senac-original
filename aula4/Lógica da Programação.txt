@@ -1,0 +1,28 @@
+1)
+
+1- Pegar uma cadeira
+2- Colocar a cadeira abaixo da lâmpada
+3- Desligar o interruptor
+4- Subir na cadeira
+5- Desrosquear a "lâmpada antiga"
+6- Descer da cadeira
+7- Largar a "lâmpada antiga"
+8- Pegar a "lâmpada nova"
+9- Subir na cadeira
+10- Rosquear a "lâmpada nova"
+11- Descer da cadeira
+12- Ligar o interruptor
+13- Pegar a cadeira
+14- Colocar a cadeira no lugar de origem
+
+2)
+
+1- Entrar no ônibus CETEMP UNISSINOS as 07:57
+2- Esperar até chegar no portão 2 da unissinos
+3- Puxar a corda de parada
+4- Descer quando o ônibus parar
+5- Apertar o botão do semáforo
+6- Atravessar a rua
+7- Entrar no portão 2
+8- Andar até o bloco E
+9- Entrar na sala 103 no bloco E08
