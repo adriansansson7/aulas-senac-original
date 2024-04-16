@@ -14,3 +14,9 @@ git commit -m "
 git push origin
 const
 let
+alert
++ - * %
+igual: ===
+diferente: !==
+maior e maior igual: > e >=
+menor e menor igual: < e <=
