@@ -174,7 +174,7 @@ c = true
 
 //Testes de comparação
 resultado = a || c
-alert(resultado) */
+alert(resultado)
 
 let a
 let b
@@ -189,4 +189,29 @@ c = true
 
 //Testes de comparação
 resultado = a || b || c
-alert(resultado)
+alert(resultado) */
+
+let nome
+
+nome = prompt("Digite seu nome:")
+
+let anoAtual
+let anoNascimento
+let idade
+
+anoAtual = prompt("Digite o ano atual:")
+anoNascimento = prompt("Digite o ano de nascimento:")
+idade = anoAtual - anoNascimento
+
+let maiorIdade
+
+maiorIdade = idade >= 18
+
+let idade2050
+
+idade2050= 2050 - anoNascimento
+
+alert(`Seu nome é ${nome}`)
+alert(`Sua idade é ${idade}`)
+alert(`É maior de idade? ${maiorIdade}`)
+alert(`Sua idade em 2050 vai ser, ${idade2050}`)
