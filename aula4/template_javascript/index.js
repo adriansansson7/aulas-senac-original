@@ -189,7 +189,7 @@ c = true
 
 //Testes de comparação
 resultado = a || b || c
-alert(resultado) */
+alert(resultado)
 
 let nome
 
@@ -214,4 +214,5 @@ idade2050= 2050 - anoNascimento
 alert(`Seu nome é ${nome}`)
 alert(`Sua idade é ${idade}`)
 alert(`É maior de idade? ${maiorIdade}`)
-alert(`Sua idade em 2050 vai ser, ${idade2050}`)
+alert(`Sua idade em 2050 vai ser, ${idade2050}`) */
+
