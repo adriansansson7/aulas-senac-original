@@ -44,9 +44,16 @@ let divD = (0)
 let respostaC = (num1 % num2)
 let respostaD = (num2 % num1)
 console.log(`O primeiro numero é divisível pelo segundo? ${divC === respostaC}`)
-console.log(`O segundo numero é divisível pelo primeiro? ${divD === respostaD}`) */
+console.log(`O segundo numero é divisível pelo primeiro? ${divD === respostaD}`)
 
 let nome = prompt("Digite seu nome:")
 let cor = prompt("Digite sua cor favorita:")
 console.log("A cor favorita de " + nome + " é " + cor)
-console.log(`A cor favorita de ${nome} é ${cor}`)
+console.log(`A cor favorita de ${nome} é ${cor}`) */
+
+const frase = prompt("Digite uma frase:")
+console.log(frase)
+const fraseMaiuscula = frase.toUpperCase()
+console.log(fraseMaiuscula)
+console.log(frase.toUpperCase().replaceAll("O" , "I"))
+console.log(frase.length)
