@@ -58,8 +58,18 @@ alert(fraseMaiuscula)
 const fraseVogais = (fraseMaiuscula.replaceAll("O" , "I"))
 alert(fraseVogais)
 const fraseCaract = (fraseMaiuscula.length)
-alert(fraseCaract) */
+alert(fraseCaract)
 
 const adocaoDog = ["Pincher" , "Golden Retriver" , "Buldogue" , "Pastor Alemão" , "Dachshund"]
 const escolhido = prompt("Digite um número de 0 a 4")
-alert(adocaoDog[escolhido])
+alert(adocaoDog[escolhido]) */
+
+const valoresIniciais = ["1" , "2" , "3" , "4" , "5" , "6"]
+console.log(valoresIniciais)
+console.log(valoresIniciais.length)
+console.log["1" , "2" , "3" , "4" , "5" , "6"]
+valoresIniciais.push(7)
+console.log(valoresIniciais)
+valoresIniciais.splice(4, 5)
+console.log(valoresIniciais)
+console.log(valoresIniciais.length)
