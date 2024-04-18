@@ -33,7 +33,7 @@ console.log(idadeAnos * 365)
 
 let idadeHoras = idadeAnos * 8786
 alert(idadeHoras)
-console.log(idadeAnos * 8786) */
+console.log(idadeAnos * 8786)
 
 let num1 = Number (prompt("Digite um número:"))
 let num2= Number (prompt("Digite outro número:"))
@@ -44,4 +44,9 @@ let divD = (0)
 let respostaC = (num1 % num2)
 let respostaD = (num2 % num1)
 console.log(`O primeiro numero é divisível pelo segundo? ${divC === respostaC}`)
-console.log(`O segundo numero é divisível pelo primeiro? ${divD === respostaD}`)
+console.log(`O segundo numero é divisível pelo primeiro? ${divD === respostaD}`) */
+
+let nome = prompt("Digite seu nome:")
+let cor = prompt("Digite sua cor favorita:")
+console.log("A cor favorita de " + nome + " é " + cor)
+console.log(`A cor favorita de ${nome} é ${cor}`)
