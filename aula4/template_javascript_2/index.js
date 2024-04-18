@@ -49,11 +49,17 @@ console.log(`O segundo numero é divisível pelo primeiro? ${divD === respostaD}
 let nome = prompt("Digite seu nome:")
 let cor = prompt("Digite sua cor favorita:")
 console.log("A cor favorita de " + nome + " é " + cor)
-console.log(`A cor favorita de ${nome} é ${cor}`) */
+console.log(`A cor favorita de ${nome} é ${cor}`)
 
 const frase = prompt("Digite uma frase:")
-console.log(frase)
-const fraseMaiuscula = frase.toUpperCase()
-console.log(fraseMaiuscula)
-console.log(frase.toUpperCase().replaceAll("O" , "I"))
-console.log(frase.length)
+alert(frase)
+const fraseMaiuscula = (frase.toUpperCase())
+alert(fraseMaiuscula)
+const fraseVogais = (fraseMaiuscula.replaceAll("O" , "I"))
+alert(fraseVogais)
+const fraseCaract = (fraseMaiuscula.length)
+alert(fraseCaract) */
+
+const adocaoDog = ["Pincher" , "Golden Retriver" , "Buldogue" , "Pastor Alemão" , "Dachshund"]
+const escolhido = prompt("Digite um número de 0 a 4")
+alert(adocaoDog[escolhido])
