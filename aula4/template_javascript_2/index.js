@@ -19,7 +19,7 @@ let numeroImpar = Number(prompt("Digite um número impar:"))
 
 console.log(numeroImpar % 2)
 
-// Sim, quando o número é impar, sobra o resto da divisão */
+// Sim, quando o número é impar, sobra o resto da divisão
 
 let idadeAnos = prompt("Qual é sua idade?")
 
@@ -33,4 +33,15 @@ console.log(idadeAnos * 365)
 
 let idadeHoras = idadeAnos * 8786
 alert(idadeHoras)
-console.log(idadeAnos * 8786)
+console.log(idadeAnos * 8786) */
+
+let num1 = Number (prompt("Digite um número:"))
+let num2= Number (prompt("Digite outro número:"))
+console.log(`O primeiro número é maior que o segundo? ${num1 >= num2}`)
+console.log(`O primeiro numero é igual ao segundo? ${num1 >= num2}`)
+let divC = (0)
+let divD = (0)
+let respostaC = (num1 % num2)
+let respostaD = (num2 % num1)
+console.log(`O primeiro numero é divisível pelo segundo? ${divC === respostaC}`)
+console.log(`O segundo numero é divisível pelo primeiro? ${divD === respostaD}`)
