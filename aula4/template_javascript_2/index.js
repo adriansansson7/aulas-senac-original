@@ -62,7 +62,7 @@ alert(fraseCaract)
 
 const adocaoDog = ["Pincher" , "Golden Retriver" , "Buldogue" , "Pastor Alemão" , "Dachshund"]
 const escolhido = prompt("Digite um número de 0 a 4")
-alert(adocaoDog[escolhido]) */
+alert(adocaoDog[escolhido])
 
 const valoresIniciais = ["1" , "2" , "3" , "4" , "5" , "6"]
 console.log(valoresIniciais)
@@ -73,3 +73,20 @@ console.log(valoresIniciais)
 valoresIniciais.splice(4, 5)
 console.log(valoresIniciais)
 console.log(valoresIniciais.length)
+
+let listaDeTarefas = []
+
+for (let i = 0; i < 3; i++) {
+let tarefa = prompt("Digite uma tarefa que você precise realizar hoje:")
+listaDeTarefas.push(tarefa)
+}
+console.log("Lista de tarefas:")
+console.log(listaDeTarefas)
+
+let indiceRealizada = parseInt(prompt("Digite o índice da tarefa que você já realizou (0, 1 ou 2):"))
+
+if (indiceRealizada >= 0 && indiceRealizada < listaDeTarefas.length)
+listaDeTarefas.splice(indiceRealizada, 1)
+console.log("\n Tarefa removida:")
+
+console.log(listaDeTarefas) */
