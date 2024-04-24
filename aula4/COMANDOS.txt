@@ -15,6 +15,7 @@ git push origin
 const
 let
 alert
+prompt
 + - * %
 igual: ===
 diferente: !==

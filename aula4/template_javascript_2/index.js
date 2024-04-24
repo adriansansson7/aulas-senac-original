@@ -59,4 +59,24 @@ switch (turno) {
     case 'Noite':
     console.log('Boa Noite!!')
     break
+}
+
+let genero = prompt("Digite o gênero do filme que deseja assistir:")
+let preço = prompt("Digite o preço do ingresso:")
+
+if (genero === 'Fantasia' && preço <= 15) {
+    console.log('Bom Filme!!')
+} else {
+    console.log("Escolha outro filme :(")
 } */
+
+let pets = []
+const nomes = []
+let quantos = Number (prompt("Você tem quantos pets?"))
+pets.push(quantos)
+let pet = 0
+
+
+if (pets == 0) {
+        alert('Que pena! Você pode adotar um pet!')
+} else if (pets > 0)
