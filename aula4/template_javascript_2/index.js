@@ -121,7 +121,7 @@ for (const valor of arrayOriginal) {
     }
 }
 console.log("\n" + "Maior número do array original:", + maiorNumero)
-console.log("Menor número do array original:", + menorNumero) */
+console.log("Menor número do array original:", + menorNumero)
 
 let filme = {
     nome: 'One Piece' ,
@@ -134,4 +134,50 @@ alert(filme.nome)
 alert(filme['diretor'])
 alert(filme.lançamento)
 alert(filme['elenco'])
-alert(filme.javi)
+alert(filme.javi) */
+
+let nome = []
+let idade = []
+let peso = []
+let tipoSanguineo = []
+let ultimaDoação = []
+
+let um
+let dois
+let tres
+let quatro
+let cinco
+let doadores = '\n' + ['1. Ana Silva' + '\n' + '2. Carlos Mendes' + '\n' + '3. Mariana Santos' + '\n' + '4. João Costa' + '\n' + '5. Isabel Oliveira']
+let sair
+
+let menu = prompt("DIGITE UM DOS NUMEROS ABAIXO, CONFORME SUA ESCOLHA:" + "\n" + "1- Cadastro" + "\n" + "2- Lista de doadores" + "\n" + "3- Buscar doadores por RH" + "\n" + "4- Buscar doadores por data:" + "\n" + "5- Sair")
+switch (menu) {
+    case '1':
+        alert('Cadastro:' + '\n' + (um = prompt('Digite seu nome:')) + '\n' + (dois = prompt('Digite sua idade:')) + '\n' + (tres = prompt("Digite seu peso:")) + '\n' + (quatro = prompt("Digite seu tipo sanguíneo:")) + '\n' + (cinco = prompt("Digite a data da sua ultima doação:")))
+        break
+    case '2':
+        alert('Lista de doadores:' + '\n' + doadores + um)
+        break;
+    case '3':
+        alert('Buscar doadores por RH:')
+        break
+    case '4':
+        alert('Buscar doadores por data:')
+        break
+    case '5':
+        alert('Sair' + '\n' + prompt('Deseja mesmo sair?'))
+        if (5 === 'Sim') {
+            alert('Tenha um Bom Dia!')
+        } else if (5 === 'Não') {
+            alert(menu)
+            
+            
+        }
+}
+
+
+nome.push(um)
+idade.push(dois)
+peso.push(tres)
+tipoSanguineo.push(quatro)
+ultimaDoação.push(cinco)
