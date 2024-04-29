@@ -134,7 +134,7 @@ alert(filme.nome)
 alert(filme['diretor'])
 alert(filme.lançamento)
 alert(filme['elenco'])
-alert(filme.javi) */
+alert(filme.javi)
 
 let nome = []
 let idade = []
@@ -149,8 +149,7 @@ let quatro
 let cinco
 let doadores = '\n' + ['1. Ana Silva' + '\n' + '2. Carlos Mendes' + '\n' + '3. Mariana Santos' + '\n' + '4. João Costa' + '\n' + '5. Isabel Oliveira']
 let sair
-
-let menu = prompt("DIGITE UM DOS NUMEROS ABAIXO, CONFORME SUA ESCOLHA:" + "\n" + "1- Cadastro" + "\n" + "2- Lista de doadores" + "\n" + "3- Buscar doadores por RH" + "\n" + "4- Buscar doadores por data:" + "\n" + "5- Sair")
+let ImprimeMenu = prompt("DIGITE UM DOS NUMEROS ABAIXO, CONFORME SUA ESCOLHA:" + "\n" + "1- Cadastro" + "\n" + "2- Lista de doadores" + "\n" + "3- Buscar doadores por RH" + "\n" + "4- Buscar doadores por data:" + "\n" + "5- Sair")
 switch (menu) {
     case '1':
         alert('Cadastro:' + '\n' + (um = prompt('Digite seu nome:')) + '\n' + (dois = prompt('Digite sua idade:')) + '\n' + (tres = prompt("Digite seu peso:")) + '\n' + (quatro = prompt("Digite seu tipo sanguíneo:")) + '\n' + (cinco = prompt("Digite a data da sua ultima doação:")))
@@ -175,9 +174,73 @@ switch (menu) {
         }
 }
 
-
+switch (usuarios) {
+    case '1':
+        alert('Cadastro' + '\n' + (um = prompt('Digite seu nome:')) + '\n' + (dois = prompt('Digite sua idade:')) + '\n' + (tres = prompt("Digite seu peso:")) + '\n' + (quatro = prompt("Digite seu tipo sanguíneo:")) + '\n' + (cinco = prompt("Digite a data da sua ultima doação:")))
+        break
+    case '2':
+        alert('Buscar doadores')
+        break;
+    case '3':
+        alert(Sair)
+        break
+} 
 nome.push(um)
 idade.push(dois)
 peso.push(tres)
 tipoSanguineo.push(quatro)
-ultimaDoação.push(cinco)
+ultimaDoação.push(cinco) */
+
+let usuarios = []
+
+function imprimeMenu(){
+    let mensagem = ""
+    mensagem += "********************************************************************" + "\n"
+    mensagem += "DIGITE UM DOS NUMEROS ABAIXO, CONFORME SUA ESCOLHA:" + "\n"
+    mensagem += "********************************************************************" + "\n"
+    mensagem += "1- Cadastro" + "\n"
+    mensagem += "2- Buscar doadores" + "\n"
+    mensagem += "3- Buscar doadores por fator RH" + "\n"
+    mensagem += "4- Buscar doadores por data" + "\n"
+    mensagem += "5- Sair" + "\n"
+    mensagem += "*******************************************************************"
+    let opcao = Number(prompt(mensagem))
+    return opcao
+}
+
+let nome = []
+let idade = []
+let peso = []
+let fatorRh = []
+let data = []
+
+
+function cadastro() {
+    nome = prompt("Qual é seu nome?")
+    idade = prompt("Qual é a sua idade?")
+    peso = prompt("Digite seu peso?")
+    fatorRh = prompt("Qual é seu tipo sanguíneo?")
+    data = prompt("Quando foi sua ultima doação?")
+}
+
+function doadores() {
+    let mensagem = ''
+    mensagem += '\n' + [`1. Ana Silva' + '\n' + '2. Carlos Mendes' + '\n' + '3. Mariana Santos' + '\n' + '4. João Costa' + '\n' + 5. ${nome}`]
+}
+
+function main() {
+    let option = 0
+    while(option !== 5){
+        option = imprimeMenu()
+        switch (option) {
+            case 1:
+                cadastro()
+                break
+            case 2:
+                doadores()
+            break
+        }
+    }
+}
+
+main()
