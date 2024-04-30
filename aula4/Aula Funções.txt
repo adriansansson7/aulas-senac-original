@@ -1,0 +1,123 @@
+Exercícios de interpretação de código
+
+1)
+
+a) Vai aparecer o resultado de 2 * 5 = 10 e 10 * 5 = 50
+b) Ele não ia imprimir, iria dar erro.
+
+2)
+
+a) Ela determina se a frase que você escrever tem a palavra
+"cenoura", se tiver vai aparecer True e se não, False.
+
+b) 
+
+I. True
+II. True
+III. False
+
+Exercícios de escrita de código
+
+1)
+
+a)
+
+function infoMe() {
+    
+    const nome = "Ádrian"
+    const idade = "19"
+    const cidade = "São Leopoldo"
+    const profissao = "Autonomo"
+    console.log(`Eu sou ${nome}, tenho ${idade}, moro em ${cidade} e sou ${profissao}.`)
+}
+infoMe()
+
+b)
+
+function infoMe() {
+    
+    const nome = String(prompt("Qual é seu nome?"))
+    const idade = Number(prompt("Qual é a sua idade?"))
+    const cidade = String(prompt("De qual cidade você é?"))
+    const profissao = String(prompt("Qual é a sua profissão?"))
+    console.log(`Eu sou ${nome}, tenho ${idade}, moro em ${cidade} e sou ${profissao}.`)
+}
+infoMe()
+
+2)
+
+a)
+
+function somaNumeros(num1, num2){
+    return num1 + num2
+}
+
+let resultadoSoma = somaNumeros(5, 3)
+alert("A soma dos números é:", resultadoSoma)
+
+b)
+
+function priMaiorOuIgual(num1, num2){
+    return num1 >= num2
+}
+
+let resultComp = priMaiorOuIgual(7, 4)
+console.log("O primeiro número é maior ou igual ao segundo?", resultComp)
+
+c)
+
+function Par(numero){
+    return numero % 2 === 0
+}
+
+let numero = 10
+const resultPar = Par(numero)
+console.log("O número", numero, "é par?", resultPar)
+
+d)
+
+function imprimirDetalhesMensagem(mensagem){
+    const tamanho = mensagem.length
+    const mensagemMaiuscula = mensagem.toUpperCase()
+    console.log("Tamanho da mensagem:", tamanho)
+    console.log("Mensagem em maiúsculas:", mensagemMaiuscula)
+}
+
+const minhaMensagem = "Zoro Sola!"
+imprimirDetalhesMensagem(minhaMensagem)
+
+3)
+
+function soma(num1, num2) {
+    return num1 + num2;
+}
+
+function subtracao(num1, num2) {
+    return num1 - num2;
+}
+
+function multiplicacao(num1, num2) {
+    return num1 * num2;
+}
+
+function divisao(num1, num2) {
+    if (num2 !== 0) {
+        return num1 / num2
+    } else {
+        return "Divisão por zero não é possível"
+    }
+}
+
+const nume1 = parseFloat(prompt("Digite o primeiro número:"))
+const nume2 = parseFloat(prompt("Digite o segundo número:"))
+
+const resultadoSoma = soma(nume1, nume2)
+const resultadoSubtracao = subtracao(nume1, nume2)
+const resultadoMultiplicacao = multiplicacao(nume1, nume2)
+const resultadoDivisao = divisao(nume1, nume2)
+
+console.log("Números inseridos:", nume1, "e", nume2)
+console.log("Soma:", resultadoSoma)
+console.log("Diferença:", resultadoSubtracao)
+console.log("Multiplicação:", resultadoMultiplicacao)
+console.log("Divisão:", resultadoDivisao)

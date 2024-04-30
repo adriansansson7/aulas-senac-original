@@ -189,7 +189,7 @@ nome.push(um)
 idade.push(dois)
 peso.push(tres)
 tipoSanguineo.push(quatro)
-ultimaDoação.push(cinco) */
+ultimaDoação.push(cinco)
 
 let usuarios = []
 
@@ -208,24 +208,28 @@ function imprimeMenu(){
     return opcao
 }
 
-let nome = []
-let idade = []
-let peso = []
-let fatorRh = []
-let data = []
+let nome
+let idade
+let peso
+let fatorRh
+let data
 
 
 function cadastro() {
     nome = prompt("Qual é seu nome?")
-    idade = prompt("Qual é a sua idade?")
+    idade = Number(prompt("Qual é a sua idade?"))
     peso = prompt("Digite seu peso?")
     fatorRh = prompt("Qual é seu tipo sanguíneo?")
     data = prompt("Quando foi sua ultima doação?")
 }
 
+usuarios.push({nome, idade, peso, fatorRh, data,})
+
 function doadores() {
-    let mensagem = ''
-    mensagem += '\n' + [`1. Ana Silva' + '\n' + '2. Carlos Mendes' + '\n' + '3. Mariana Santos' + '\n' + '4. João Costa' + '\n' + 5. ${nome}`]
+    let mensagem = ""
+    mensagem += "LISTA DE DOADORES: \n"
+    alert(usuarios)
+
 }
 
 function main() {
@@ -243,4 +247,14 @@ function main() {
     }
 }
 
-main()
+main() */
+
+function infoMe() {
+    
+    const nome = String(prompt("Qual é seu nome?"))
+    const idade = Number(prompt("Qual é a sua idade?"))
+    const cidade = String(prompt("De qual cidade você é?"))
+    const profissao = String(prompt("Qual é a sua profissão?"))
+    console.log(`Eu sou ${nome}, tenho ${idade}, moro em ${cidade} e sou ${profissao}.`)
+}
+infoMe()
