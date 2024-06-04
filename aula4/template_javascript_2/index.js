@@ -123,19 +123,6 @@ for (const valor of arrayOriginal) {
 console.log("\n" + "Maior número do array original:", + maiorNumero)
 console.log("Menor número do array original:", + menorNumero)
 
-let filme = {
-    nome: 'One Piece' ,
-    diretor: 'Eiichiro Oda' ,
-    lançamento: '1997' ,
-    elenco: 'Luffy, Zoro, Usopp, Sanji, Nami, Chopper, Robin, Franky, Brook e Jinbe' ,
-    javi: 'SIM'
-}
-alert(filme.nome)
-alert(filme['diretor'])
-alert(filme.lançamento)
-alert(filme['elenco'])
-alert(filme.javi)
-
 let nome = []
 let idade = []
 let peso = []
@@ -213,6 +200,7 @@ let idade
 let peso
 let fatorRh
 let data
+let tudo
 
 
 function cadastro() {
@@ -225,11 +213,34 @@ function cadastro() {
 
 usuarios.push({nome, idade, peso, fatorRh, data,})
 
-function doadores() {
-    let mensagem = ""
-    mensagem += "LISTA DE DOADORES: \n"
-    alert(usuarios)
+let numDoadores = 1
 
+function doadores() {
+    let mensagem = ``
+    mensagem += `LISTA DE DOADORES: \n`
+    for (let i = 0; i < numDoadores; i++){
+alert(`${nome}, ${idade}, ${peso}Kg, ${fatorRh}, ${data}`)
+    }
+}
+
+let tipoSangue
+
+function buscarUm() {
+    let mensagem = ``
+    mensagem += `LISTAGEM DOS TIPOS SANGUÍNEOS: \n`
+    for (let i = 0; i < numDoadores; i++){
+        alert(`${fatorRh}`)
+        prompt()
+    }
+}
+
+function buscarDois() {
+    let mensagem = ``
+    mensagem += `LISTAGEM DAS DATAS DE DOAÇÕES: \n`
+    for (let i = 0; i < numDoadores; i++){
+        alert(`${data}`)
+        prompt()
+    }
 }
 
 function main() {
@@ -242,19 +253,161 @@ function main() {
                 break
             case 2:
                 doadores()
+                break
+            case 3:
+                buscarUm()
+                break
+            case 4:
+                buscarDois()
+                break
+        }
+    }
+}
+
+main()
+
+let usuarios = []
+
+function imprimeMenu(){
+    let mensagem = ""
+    mensagem += "********************************************************************" + "\n"
+    mensagem += "DIGITE UM DOS NUMEROS ABAIXO, CONFORME SUA ESCOLHA:" + "\n"
+    mensagem += "********************************************************************" + "\n"
+    mensagem += "1- Cadastro" + "\n"
+    mensagem += "2- Buscar doadores" + "\n"
+    mensagem += "3- Buscar doadores por fator RH" + "\n"
+    mensagem += "4- Buscar doadores por data" + "\n"
+    mensagem += "5- Sair" + "\n"
+    mensagem += "*******************************************************************"
+    let opcao = Number(prompt(mensagem))
+    return opcao
+}
+
+let nome
+let idade
+let peso
+let fatorRh
+let data
+
+
+function cadastro() {
+    nome = prompt("Qual é seu nome?")
+    idade = Number(prompt("Qual é a sua idade?"))
+    peso = prompt("Digite seu peso?")
+    fatorRh = prompt("Qual é seu tipo sanguíneo?")
+    data = prompt("Quando foi sua ultima doação?")
+}
+
+usuarios.push({nome, idade, peso, fatorRh, data,})
+
+let numDoadores = 1
+
+function doadores() {
+    let mensagem = ""
+    mensagem += "LISTA DE DOADORES: \n"
+    for (let i = 0; i < numDoadores; i++){
+alert(`${nome}, ${idade}, ${peso}Kg, ${fatorRh}, ${data}`)
+    }
+}
+
+function buscarUm() {
+    let mensagem = ""
+    let tipoSanguineo
+    mensagem += "LISTAGEM DOS TIPOS SANGUÍNEOS: \n"
+    tipoSanguineo = prompt()
+    for (let i = 0; i < numDoadores; i++){
+        alert(mensagem + '\n' + `${fatorRh}`)
+    switch (tipoSanguineo) {
+        case "A":
+            alert(`${fatorRh}`)
             break
+        case "B":
+            alert(`${fatorRh}`)
+            break
+        case "AB":
+            alert(`${fatorRh}`)
+            break
+        case "O":
+            alert(`${fatorRh}`)
+            break
+        }
+    }
+}
+
+function buscarDois() {
+    let mensagem = ""
+    mensagem += "LISTAGEM DAS DATAS DE DOAÇÕES: \n"
+    for (let i = 0; i < numDoadores; i++){
+        alert(mensagem + '\n' + `${data}`)
+    switch (alert("Selecione um mês de 01 a 06:") = prompt()) {
+        case  "01" === `${data}`:
+            alert(`${data}`)
+            break
+        case "02" === `${data}`:
+            alert(`${data}`)
+            break
+        case "03" === `${data}`:
+            alert(`${data}`)
+            break
+        case "04" === `${data}`:
+            alert(`${data}`)
+            break
+        case "05" === `${data}`:
+            alert(`${data}`)
+            break
+        case "06" === `${data}`:
+            alert(`${data}`)
+            break
+        }
+    }
+}
+
+function main() {
+    let option = 0
+    while(option !== 5){
+        option = imprimeMenu()
+        switch (option) {
+            case 1:
+                cadastro()
+                break
+            case 2:
+                doadores()
+                break
+            case 3:
+                buscarUm()
+                break
+            case 4:
+                buscarDois()
+                break
         }
     }
 }
 
 main() */
 
-function infoMe() {
-    
-    const nome = String(prompt("Qual é seu nome?"))
-    const idade = Number(prompt("Qual é a sua idade?"))
-    const cidade = String(prompt("De qual cidade você é?"))
-    const profissao = String(prompt("Qual é a sua profissão?"))
-    console.log(`Eu sou ${nome}, tenho ${idade}, moro em ${cidade} e sou ${profissao}.`)
-}
-infoMe()
+let carrinho = []
+
+const fruta1 = {
+    nome: "Maçã",
+    disponibilidade: "True"
+  }
+  
+  const fruta2 = {
+    nome: "Pêra",
+    disponibilidade: "True"
+  }
+  
+  const fruta3 = {
+    nome: "Ameixa",
+    disponibilidade: "True"
+  }
+  
+  function colocarNoCarrinho(fruta) {
+    carrinho.push(fruta)
+  }
+  
+  colocarNoCarrinho(fruta1)
+  colocarNoCarrinho(fruta2)
+  colocarNoCarrinho(fruta3)
+  
+  console.log(carrinho)
