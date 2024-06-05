@@ -264,9 +264,13 @@ function main() {
     }
 }
 
-main()
+main() */
+
+//criei um objeto vazio
 
 let usuarios = []
+
+//criei a função onde aparece meu menu
 
 function imprimeMenu(){
     let mensagem = ""
@@ -274,7 +278,7 @@ function imprimeMenu(){
     mensagem += "DIGITE UM DOS NUMEROS ABAIXO, CONFORME SUA ESCOLHA:" + "\n"
     mensagem += "********************************************************************" + "\n"
     mensagem += "1- Cadastro" + "\n"
-    mensagem += "2- Buscar doadores" + "\n"
+    mensagem += "2- Doadores" + "\n"
     mensagem += "3- Buscar doadores por fator RH" + "\n"
     mensagem += "4- Buscar doadores por data" + "\n"
     mensagem += "5- Sair" + "\n"
@@ -283,12 +287,15 @@ function imprimeMenu(){
     return opcao
 }
 
+//declarei as informações que vão ser solicitadas para o cadastro
+
 let nome
 let idade
 let peso
 let fatorRh
 let data
 
+//criei a função expecifíca para fazer o cadastro
 
 function cadastro() {
     nome = prompt("Qual é seu nome?")
@@ -298,69 +305,93 @@ function cadastro() {
     data = prompt("Quando foi sua ultima doação?")
 }
 
-usuarios.push({nome, idade, peso, fatorRh, data,})
+//declarei mais informações, onde inclui informações para completar a lista de doadores e testar as outras funções
+
+let nome1 = " Laura, 20, 61Kg, B-, 03/05 \n Vitória, 19, 75Kg, A+, 26/02 \n Guilherme, 21, 72Kg, O-, 30/01 \n Pedro, 18, 81Kg, AB-. 13/04"
+let fatorRh1 = "B-"
+let fatorRh2 = "A+"
+let fatorRh3 = "O-"
+let fatorRh4 = "AB-"
+let data1 = "03/05"
+let data2 = "26/02"
+let data3 = "30/01"
+let data4 = "13/04"
+
+//inlcui todas as informações depositadas, dentro do objeto vazio
+
+usuarios.push({nome, nome1, idade, peso, fatorRh, fatorRh1, fatorRh2, fatorRh3, fatorRh4, data, data1, data2, data3, data4})
+
+//criei outra função, só que essa função é para mostrar a lista de doadores
 
 let numDoadores = 1
 
 function doadores() {
     let mensagem = ""
-    mensagem += "LISTA DE DOADORES: \n"
+    mensagem += "LISTA DE DOADORES \n"
     for (let i = 0; i < numDoadores; i++){
-alert(`${nome}, ${idade}, ${peso}Kg, ${fatorRh}, ${data}`)
+alert(mensagem + '\n' + `${nome}, ${idade}, ${peso}Kg, ${fatorRh}, ${data}` + '\n' + `${nome1}`)
     }
 }
+
+//criei outra função, só que essa é para buscar os doadores pelo tipo sanguíneo
 
 function buscarUm() {
     let mensagem = ""
     let tipoSanguineo
-    mensagem += "LISTAGEM DOS TIPOS SANGUÍNEOS: \n"
+    mensagem += "LISTAGEM DOS TIPOS SANGUÍNEOS \n"
+    alert(mensagem + '\n' + `${fatorRh}` + '\n' + `${fatorRh1}` + '\n' + `${fatorRh2}` + '\n' + `${fatorRh3}` + '\n' + `${fatorRh4}`)
+    alert("BUSCAR TIPO SANGUÍNEO")
     tipoSanguineo = prompt()
     for (let i = 0; i < numDoadores; i++){
-        alert(mensagem + '\n' + `${fatorRh}`)
     switch (tipoSanguineo) {
         case "A":
-            alert(`${fatorRh}`)
+            alert("Laura:"`${fatorRh2}`)
             break
         case "B":
-            alert(`${fatorRh}`)
+            alert("Vitória:"`${fatorRh1}`)
             break
         case "AB":
-            alert(`${fatorRh}`)
+            alert("Pedro:"`${fatorRh4}`)
             break
         case "O":
-            alert(`${fatorRh}`)
+            alert(`${nome}: ${fatorRh}` + '\n' + "Guilherme:"`${fatorRh3}`)
             break
         }
     }
 }
 
+//criei outra função, só que essa é para buscar os doadores pela data de doação
+
 function buscarDois() {
     let mensagem = ""
-    mensagem += "LISTAGEM DAS DATAS DE DOAÇÕES: \n"
+    mensagem += "LISTAGEM DAS DATAS DE DOAÇÕES \n"
     for (let i = 0; i < numDoadores; i++){
-        alert(mensagem + '\n' + `${data}`)
-    switch (alert("Selecione um mês de 01 a 06:") = prompt()) {
-        case  "01" === `${data}`:
-            alert(`${data}`)
+        alert(mensagem + '\n' + `${data3}` + '\n' + `${data2}` + '\n' + `${data}` + '\n' + `${data4}` + '\n' + `${data1}`)
+        alert("Selecione um mês de 01 a 06:")
+    switch (prompt()) {
+        case "01":
+            alert("Guilherme: " + `${data3}`)
             break
-        case "02" === `${data}`:
-            alert(`${data}`)
+        case "02":
+            alert("Vitória: " + `${data2}`)
             break
-        case "03" === `${data}`:
-            alert(`${data}`)
+        case "03":
+            alert("NENHUM USUÁRIO ENCONTRADO")
             break
-        case "04" === `${data}`:
-            alert(`${data}`)
+        case "04":
+            alert("Ádrian: " + `${data}` + '\n' + "Pedro: " + `${data4}`)
             break
-        case "05" === `${data}`:
-            alert(`${data}`)
+        case "05":
+            alert("Laura: " + `${data1}`)
             break
-        case "06" === `${data}`:
-            alert(`${data}`)
+        case "06":
+            alert("NENHUM USUÁRIO ENCONTRADO")
             break
         }
     }
 }
+
+//essa é a função main do meu code.
 
 function main() {
     let option = 0
@@ -383,31 +414,4 @@ function main() {
     }
 }
 
-main() */
-
-let carrinho = []
-
-const fruta1 = {
-    nome: "Maçã",
-    disponibilidade: "True"
-  }
-  
-  const fruta2 = {
-    nome: "Pêra",
-    disponibilidade: "True"
-  }
-  
-  const fruta3 = {
-    nome: "Ameixa",
-    disponibilidade: "True"
-  }
-  
-  function colocarNoCarrinho(fruta) {
-    carrinho.push(fruta)
-  }
-  
-  colocarNoCarrinho(fruta1)
-  colocarNoCarrinho(fruta2)
-  colocarNoCarrinho(fruta3)
-  
-  console.log(carrinho)
+main()
