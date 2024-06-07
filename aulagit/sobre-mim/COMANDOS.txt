@@ -1,0 +1,14 @@
+pwd
+ls
+cd
+mkdir
+touch
+cd ~
+git clone
+git branch
+git checkout
+git status
+git add .
+git add --all
+git commit -m "
+git push origin

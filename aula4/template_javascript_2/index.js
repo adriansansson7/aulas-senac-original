@@ -415,207 +415,122 @@ function main() {
     }
 }
 
-main()
-
-const desastresNaturais = ["terremoto", "tsunami", "furacão", "inundação", "erupção vulcânica", "guerra", "incêndio", "roubo"]
-
-let armazenar1 = []
-let armazenar2 = []
-
-function imprimeMenu(){
-    let mensagem = ""
-    mensagem += "********************************************************************" + "\n"
-    mensagem += "DIGITE UM DOS NUMEROS ABAIXO, CONFORME SUA ESCOLHA:" + "\n"
-    mensagem += "********************************************************************" + "\n"
-    mensagem += "1- Desastre" + "\n"
-    mensagem += "2- Local" + "\n"
-    mensagem += "3- Alertar" + "\n"
-    mensagem += "4- Sair" + "\n"
-    mensagem += "*******************************************************************"
-    let opcao = Number(prompt(mensagem))
-    return opcao
-}
-
-function desastre() {
-    let mensagem = ""
-    mensagem += ("SELECIONE UM NÚMERO DE 1 A 8 PARA ESCOLHER O DESASTRE/CALAMIDADE \n 1- Terremoto \n 2- Tsunami \n 3- Furacão \n 4- Inundação \n 5- Erupção Vulcânica \n 6- Guerra \n 7- Incêndio \n 8- Roubo")
-    opcoes1 = prompt(mensagem)
-    switch (opcoes1) {
-        case "1":
-            armazenar1.push(`${desastresNaturais}`[0])
-            alert(`ALERTA! Ocorreu um ${desastresNaturais[0].toUpperCase()}`)
-            break
-        case "2":
-            armazenar1.push(`${desastresNaturais}`[1])
-            alert(`ALERTA! Ocorreu um ${desastresNaturais[1].toUpperCase()}`)
-            break
-        case "3":
-            armazenar1.push(`${desastresNaturais}`[2])
-            alert(`ALERTA! Ocorreu um ${desastresNaturais[2].toUpperCase()}`)
-            break
-        case "4":
-            armazenar1.push(`${desastresNaturais}`[3])
-            alert(`ALERTA! Ocorreu um ${desastresNaturais[3].toUpperCase()}`)
-            break
-        case "5":
-            armazenar1.push(`${desastresNaturais}`[4])
-            alert(`ALERTA! Ocorreu um ${desastresNaturais[4].toUpperCase()}`)
-            break
-        case "6":
-            armazenar1.push(`${desastresNaturais}`[5])
-            alert(`ALERTA! Ocorreu um ${desastresNaturais[5].toUpperCase()}`)
-            break
-        case "7":
-            armazenar1.push(`${desastresNaturais}`[6])
-            alert(`ALERTA! Ocorreu um ${desastresNaturais[6].toUpperCase()}`)
-            break
-        case "8":
-            armazenar1.push(`${desastresNaturais}`[7])
-            alert(`ALERTA! Ocorreu um ${desastresNaturais[7].toUpperCase()}`)
-            break
-    }
-}
-
-const locais = ["NO PAÍS", "NO ESTADO", "NA CIDADE", "NAS PROXIMIDADES"]
-
-function local() {
-    let mensagem = ""
-    mensagem += ("SELECIONE UM NÚMERO DE 1 A 4 PARA ESCOLHER O LOCAL QUE VOCÊ QUER ALERTAR \n 1- País \n 2- Estado \n 3- Cidade \n 4- Proximidades")
-    opcoes2 = prompt(mensagem)
-    switch (opcoes2) {
-        case "1":
-            armazenar2.push(`${locais}`[0])
-            alert(`DESASTRE/CALAMIDADE ${locais[0].toUpperCase()}`)
-            break
-        case "2":
-            armazenar2.push(`${locais}`[1])
-            alert(`DESASTRE/CALAMIDADE ${locais[1].toUpperCase()}`)
-            break
-        case "3":
-            armazenar2.push(`${locais}`[2])
-            alert(`DESASTRE/CALAMIDADE ${locais[2].toUpperCase()}`)
-            break
-        case "4":
-            armazenar2.push(`${locais}`[3])
-            alert(`DESASTRE/CALAMIDADE ${locais[3].toUpperCase()}`)
-    }
-}
-
-function alertarUrgente() {
-    mensagem += "ALERTA!!!!!\n";
-    mensagem += `Desastre: ${armazenar1.join(", ")}`
-    mensagem += `Local: ${armazenar2.join(", ")}`
-    alert(mensagem);
-}
-
-function sair() {
-    alert("Saindo do programa.");
-}
-
-function main() {
-    let option = 0
-    while(option !== 5){
-        option = imprimeMenu()
-        switch (option) {
-            case 1:
-                desastre()
-                break
-            case 2:
-                local()
-                break
-            case 3:
-                alertarUrgente()
-                break
-            case 4:
-                sair()
-                break
-        }
-    }
-}
-
 main() */
 
-const desastresNaturais = ["Terremoto", "tsunami", "furacão", "inundação", "erupção vulcânica", "guerra", "incêndio", "roubo"]
-let armazenar1 = []
-let armazenar2 = []
+// Declarei a lista de usuários como um objeto vazio
+let usuarios = []
 
+// Criei uma função para exibir o menu
 function imprimeMenu(){
-    let mensagem = ""
-    mensagem += "********************************************************************" + "\n"
-    mensagem += "DIGITE UM DOS NÚMEROS ABAIXO, CONFORME SUA ESCOLHA:" + "\n"
-    mensagem += "********************************************************************" + "\n"
-    mensagem += "1- Desastre" + "\n"
-    mensagem += "2- Local" + "\n"
-    mensagem += "3- Alertar" + "\n"
-    mensagem += "4- Sair" + "\n"
+    let mensagem = "********************************************************************\n"
+    mensagem += "DIGITE UM DOS NUMEROS ABAIXO, CONFORME SUA ESCOLHA:\n"
+    mensagem += "********************************************************************\n"
+    mensagem += "1- Cadastro\n"
+    mensagem += "2- Doadores\n"
+    mensagem += "3- Buscar doadores por fator RH\n"
+    mensagem += "4- Buscar doadores por data\n"
+    mensagem += "5- Sair\n"
     mensagem += "*******************************************************************"
+    // Criei uma variável e declarei ela como número, para que o usúario digite o número enquanto aparece o menu acima
     let opcao = Number(prompt(mensagem))
     return opcao
 }
+// Criei uma função para cadastrar os novos doadores
+function cadastro() {
+    let novoUsuario = {
+        nome: prompt("Digite seu nome:"),
+        idade: Number(prompt("Digite sua idade:")),
+        peso: prompt("Digite seu peso:"),
+        fatorRh: prompt("Digite seu tipo sanguíneo:"),
+        data: prompt("Digite a data da sua última doação: mm/dd/aa")
+    }
+    // Coloquei as informações que o usuário digitou dentro do objeto usuarios, que estava vazio
+    usuarios.push(novoUsuario)
+}
 
-function desastre() {
-    let mensagem = ""
-    mensagem += "SELECIONE UM NÚMERO DE 1 A 8 PARA ESCOLHER O DESASTRE/CALAMIDADE\n"
-    desastresNaturais.forEach((desastre, index) => {
-        mensagem += `${index + 1}- ${desastre}\n`
-    })
-    let opcoes1 = Number(prompt(mensagem))
-    if (opcoes1 >= 1 && opcoes1 <= desastresNaturais.length) {
-        armazenar1.push(desastresNaturais[opcoes1 - 1])
-        alert(`ALERTA! Ocorreu um ${desastresNaturais[opcoes1 - 1].toUpperCase()}`)
+// Criei uma função que exibe a lista de doadores
+function doadores() {
+    let mensagem = "LISTA DE DOADORES \n"
+    // Criei um laço que vai ficar lendo as informações depositadas no objeto usuarios
+    for (let i = 0; i < usuarios.length; i++){
+        let doador = usuarios[i];
+        mensagem += `${i+1} de ${usuarios.length} \nNome: ${doador.nome} \nIdade: ${doador.idade} \nPeso: ${doador.peso}Kg \nTipo Sanguíneo: ${doador.fatorRh} \nData da Última Doação: ${doador.data} \n\n`
+    }
+    // Esse alert vai mostrar a minha mensagem de titulo, junto com as informações dos usuarios cadastrados abaixo
+    alert(mensagem)
+}
+
+// Criei uma função para fazer a busca dos doadores, atráves do tipo sanguineo
+function buscarUm() {
+    // Criei uma variavel onde o usuario vai digitar o tipo sanguineo que ele deseja buscar
+    let tipoSanguineo = prompt("Digite o tipo sanguíneo que deseja buscar:")
+     /* Criei outra variavel, onde coloquei o array de filter, que cria um novo array chamado encontrados que armazena
+     só os objetos que estão em usuarios, que são o fatorRh que os usuarios cadastraram */
+    let encontrados = usuarios.filter(doador => doador.fatorRh === tipoSanguineo)
+    // Utilizei o If Else, caso o usuario busque um tipo sanguineo que conste ou não na lista
+    if (encontrados.length === 0) {
+        alert("Nenhum doador encontrado com esse tipo sanguíneo.")
     } else {
-        alert("Opção inválida. Por favor, escolha um número válido.")
+        let mensagem = "Doadores com o tipo sanguíneo " + tipoSanguineo + ":\n"
+        /* Utilizei a variavel encontrados, onde o forEach lista somente 
+        os doadores encontrados com o tipo sanguíneo especificado */
+        encontrados.forEach(doador => {
+            mensagem += doador.nome + "\n"
+        })
+        // Esse alert, vai mostrar a mensagem onde aparece somente o nome do doador, referente ao seu tipo sanguineo
+        alert(mensagem)
     }
 }
 
-const locais = ["no País", "no Estado", "na Cidade", "nas Proximidades"]
-
-function local() {
-    let mensagem = ""
-    mensagem += "SELECIONE UM NÚMERO DE 1 A 4 PARA ESCOLHER O LOCAL QUE VOCÊ QUER ALERTAR\n"
-    locais.forEach((local, index) => {
-        mensagem += `${index + 1}- ${local}\n`
+// Criei uma função para buscar doadores pelo mês da última doação
+function buscarDois() {
+    // Criei a variavel mês, onde pede o mês da ultima doação do usuario buscado.
+    let mes = prompt("Selecione um mês de 01 a 12:")
+    /* Criei outra variavel, onde coloquei o array de filter, que cria um novo array chamado encontrados que armazena
+     só os objetos que estão em usuarios, que são a data que os usuarios cadastraram */
+    let encontrados = usuarios.filter(doador => {
+        let data = new Date(doador.data)
+        return data.getMonth() + 1 === parseInt(mes)
     })
-    let opcoes2 = Number(prompt(mensagem))
-    if (opcoes2 >= 1 && opcoes2 <= locais.length) {
-        armazenar2.push(locais[opcoes2 - 1])
-        alert(`DESASTRE/CALAMIDADE ${locais[opcoes2 - 1].toUpperCase()}`)
+    // Utilizei o If Else, caso o usuario busque um mês que conste ou não na lista
+    if (encontrados.length === 0) {
+        alert("Nenhum doador encontrado para este mês.")
     } else {
-        alert("Opção inválida. Por favor, escolha um número válido.")
+        let mensagem = "Doadores que doaram no mês " + mes + ":\n"
+        /* Utilizei a variavel encontrados, onde o forEach lista somente os doadores
+        encontrados que doaram no mês especificado */
+        encontrados.forEach(doador => {
+            mensagem += doador.nome + " - " + doador.data + "\n"
+        })
+        // Esse alert, vai mostrar a mensagem onde aparece somente o nome do doador, referente a data da sua ultima doação
+        alert(mensagem)
     }
 }
 
-function alertarUrgente() {
-    let mensagem = ""
-    mensagem += "ALERTA!!!!!\n"
-    mensagem += `DESASTRE/CALAMIDADE: ${armazenar1.join(", ")}\n`
-    mensagem += `LOCAL:: ${armazenar2.join(", ")}`
-    alert(mensagem);
-}
-
-function sair() {
-    alert("Saindo do programa.")
-}
-
+// Criei a função principal, que a responsavel por fazer o code funcionar
 function main() {
     let option = 0
-    while(option !== 4){
+    // Criei um loop que fica repetindo até que o usuário escolha a opção de sair
+    while(option !== 5){
+        // Mostra o menu e tambem a opção escolhida pelo usuário
         option = imprimeMenu()
+        // Com base na opção escolhida, o programa vai rodar a função especifica de cada caso
         switch (option) {
             case 1:
-                desastre()
+                cadastro()
                 break
             case 2:
-                local()
+                doadores()
                 break
             case 3:
-                alertarUrgente()
+                buscarUm()
                 break
             case 4:
-                sair()
+                buscarDois()
                 break
         }
     }
 }
 
+// Criei a função principal, que faz com que o programa seja inicado
 main()
