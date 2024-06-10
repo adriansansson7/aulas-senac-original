@@ -1,4 +1,4 @@
-// Declarei a lista de usuários como um objeto vazio
+// Criei uma variavel global, e a declarei um objeto vazio
 let usuarios = []
 
 // Criei uma função para exibir o menu
@@ -72,7 +72,7 @@ function buscarDois() {
     let encontrados = usuarios.filter(doador => {
         let data = new Date(doador.data)
         return data.getMonth() + 1 === parseInt(mes)
-    })
+})
     // Utilizei o If Else, caso o usuario busque um mês que conste ou não na lista
     if (encontrados.length === 0) {
         alert("Nenhum doador encontrado para este mês.")
@@ -86,6 +86,11 @@ function buscarDois() {
         // Esse alert, vai mostrar a mensagem onde aparece somente o nome do doador, referente a data da sua ultima doação
         alert(mensagem)
     }
+}
+
+function sair() {
+    alert("Tenham um ótimo dia!")
+    return
 }
 
 // Criei a função principal, que a responsavel por fazer o code funcionar
@@ -109,6 +114,8 @@ function main() {
             case 4:
                 buscarDois()
                 break
+            case 5:
+                sair()
         }
     }
 }
